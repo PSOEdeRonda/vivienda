@@ -4,7 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plan de Vivienda | PSOE Ronda</title>
+
+    <!-- METATAGS PARA REDES SOCIALES (Vista Previa/OG Image) -->
+    <meta property="og:title" content="Plan de Vivienda: 1.000 Viviendas para Ronda | PSOE">
+    <meta property="og:description" content="Conoce la propuesta del PSOE para activar el mercado de vivienda y terminar con la parálisis de 15 años.">
+    <meta property="og:image" content="https://imgur.com/lG732lU.jpeg">
+    <meta property="og:url" content="TU_URL_DE_GITHUB_AQUÍ">
+    <meta property="og:type" content="website">
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración de Colores Corporativos -->
     <script>
         tailwind.config = {
             theme: {
@@ -27,27 +37,13 @@
             }
         }
     </script>
+    <!-- Fuentes e Iconos -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         body { font-family: 'Inter', sans-serif; }
         .text-shadow { text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-        
-        /* Animación suave para elementos */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translate3d(0, 20px, 0);
-            }
-            to {
-                opacity: 1;
-                transform: translate3d(0, 0, 0);
-            }
-        }
-        .animate-fade-in-up {
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -76,9 +72,9 @@
 
         <!-- Menú Móvil -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 flex-col gap-4 shadow-lg absolute w-full top-full left-0">
-            <a href="#realidad" class="block py-2 text-gray-600 hover:text-psoe-red font-bold">La Realidad</a>
-            <a href="#solucion" class="block py-2 text-gray-600 hover:text-psoe-red font-bold">Nuestra Solución</a>
-            <a href="#ejes" class="block py-2 text-gray-600 hover:text-psoe-red font-bold">4 Ejes</a>
+            <a href="#realidad" class="block py-2 text-gray-600 hover:text-psoe-red">La Realidad</a>
+            <a href="#solucion" class="block py-2 text-gray-600 hover:text-psoe-red">Nuestra Solución</a>
+            <a href="#ejes" class="block py-2 text-gray-600 hover:text-psoe-red">4 Ejes</a>
         </div>
     </header>
 
@@ -87,34 +83,30 @@
         <!-- Fondo Decorativo -->
         <div class="absolute inset-0 opacity-20 bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Puente_Nuevo_Ronda.jpg/1200px-Puente_Nuevo_Ronda.jpg')] bg-cover bg-center"></div>
         
-        <!-- Contenedor principal centrado -->
         <div class="container mx-auto px-4 relative z-10 flex flex-col items-center text-center">
             
-            <!-- Texto Hero (Título y Subtítulo Anchos) -->
-            <div class="animate-fade-in-up w-full max-w-5xl mx-auto mb-10">
-                <span class="inline-block bg-psoe-red text-white text-sm font-bold px-3 py-1 rounded-full mb-6 uppercase tracking-wider">
+            <!-- Texto Hero -->
+            <div class="max-w-4xl mx-auto">
+                <span class="inline-block bg-psoe-red text-white text-sm font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
                     VIVIENDA
                 </span>
-                <h1 class="text-4xl md:text-7xl font-black text-white leading-tight mb-8">
+                <h1 class="text-4xl md:text-6xl font-black text-white leading-tight mb-6">
                     Nuestro plan para el <span class="text-psoe-red">CAMBIO</span>: <br>
                     La Vivienda es Prioridad
                 </h1>
-                <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto font-light">
+                <p class="text-xl text-gray-300 mb-8 max-w-lg mx-auto">
                     Frente a la parálisis y la especulación, ofrecemos soluciones reales.
-                    <span class="text-white font-bold block mt-3 text-2xl md:text-3xl">Más de 1.000 viviendas para Ronda.</span>
+                    <span class="text-white font-bold block mt-2">Más de 1.000 viviendas para Ronda.</span>
                 </p>
-                
-                <!-- Botón de acción (Mantenido cerca del texto para usabilidad) -->
-                <div class="flex justify-center mb-12">
-                    <a href="#solucion" class="bg-psoe-red text-white px-10 py-4 rounded-lg font-bold text-xl hover:bg-psoe-dark transition transform hover:scale-105 shadow-lg border-2 border-transparent hover:border-white">
+                <div class="flex justify-center mb-10">
+                    <!-- Logo Plan para el Cambio -->
+                    <img src="https://imgur.com/K63kqOG.jpge" alt="Logo Nuestro Plan para el Cambio" class="w-full max-w-sm drop-shadow-2xl animate-fade-in-up">
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#solucion" class="bg-psoe-red text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-psoe-dark transition transform hover:scale-105 shadow-lg text-center">
                         <i class="fas fa-hammer me-2"></i> Ver Propuesta
                     </a>
                 </div>
-            </div>
-
-            <!-- Imagen Logo Plan (Debajo del texto) -->
-            <div class="flex justify-center animate-fade-in-up w-full" style="animation-delay: 0.2s;">
-                <img src="https://imgur.com/K63kqOG.png" alt="Logo Nuestro Plan para el Cambio" class="w-full max-w-lg md:max-w-xl drop-shadow-2xl transform hover:scale-105 transition duration-500">
             </div>
         </div>
     </section>
@@ -137,11 +129,11 @@
                     <h3 class="text-2xl font-bold text-pp-blue mb-2 uppercase">Gestión Actual (PP)</h3>
                     <div class="text-6xl font-black text-pp-blue mb-4">0 <span class="text-3xl">Llaves</span></div>
                     <p class="text-gray-700 font-medium mb-6">Entregadas en 15 años de gobierno</p>
-                    <ul class="text-left space-y-3 text-gray-600 mx-auto max-w-xs">
-                        <li class="flex items-center"><i class="fas fa-times text-pp-blue w-6 flex-shrink-0"></i> Parálisis urbanística</li>
-                        <li class="flex items-center"><i class="fas fa-times text-pp-blue w-6 flex-shrink-0"></i> Pérdida de población</li>
-                        <li class="flex items-center"><i class="fas fa-times text-pp-blue w-6 flex-shrink-0"></i> Especulación</li>
-                        <li class="flex items-center"><i class="fas fa-times text-pp-blue w-6 flex-shrink-0"></i> Burocracia excesiva</li>
+                    <ul class="text-left space-y-3 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-times text-pp-blue w-6"></i> Parálisis urbanística</li>
+                        <li class="flex items-center"><i class="fas fa-times text-pp-blue w-6"></i> Pérdida de población</li>
+                        <li class="flex items-center"><i class="fas fa-times text-pp-blue w-6"></i> Especulación</li>
+                        <li class="flex items-center"><i class="fas fa-times text-pp-blue w-6"></i> Burocracia excesiva</li>
                     </ul>
                 </div>
 
@@ -153,11 +145,11 @@
                     <h3 class="text-2xl font-bold text-psoe-red mb-2 uppercase">Compromiso PSOE</h3>
                     <div class="text-6xl font-black text-psoe-red mb-4">1.000 <span class="text-3xl">Viviendas</span></div>
                     <p class="text-gray-700 font-medium mb-6">Planificadas para la próxima legislatura</p>
-                    <ul class="text-left space-y-3 text-gray-700 mx-auto max-w-xs">
-                        <li class="flex items-center"><i class="fas fa-heart text-psoe-red w-6 flex-shrink-0"></i> Planificación real</li>
-                        <li class="flex items-center"><i class="fas fa-heart text-psoe-red w-6 flex-shrink-0"></i> Crecimiento sostenible</li>
-                        <li class="flex items-center"><i class="fas fa-heart text-psoe-red w-6 flex-shrink-0"></i> Oportunidad para jóvenes</li>
-                        <li class="flex items-center"><i class="fas fa-heart text-psoe-red w-6 flex-shrink-0"></i> Gestión pública eficaz</li>
+                    <ul class="text-left space-y-3 text-gray-700">
+                        <li class="flex items-center"><i class="fas fa-heart text-psoe-red w-6"></i> Planificación real</li>
+                        <li class="flex items-center"><i class="fas fa-heart text-psoe-red w-6"></i> Crecimiento sostenible</li>
+                        <li class="flex items-center"><i class="fas fa-heart text-psoe-red w-6"></i> Oportunidad para jóvenes</li>
+                        <li class="flex items-center"><i class="fas fa-heart text-psoe-red w-6"></i> Gestión pública eficaz</li>
                     </ul>
                 </div>
 
@@ -233,9 +225,8 @@
     <!-- CALL TO ACTION / FOOTER -->
     <footer id="contacto" class="bg-gray-900 text-white pt-16 pb-8 border-t-4 border-psoe-red">
         <div class="container mx-auto px-4">
-            <!-- Aumentado gap-12 a gap-16 para más espacio -->
             <div class="grid md:grid-cols-3 gap-16 mb-12 text-center md:text-left">
-                <!-- Info (Se mantiene alineada a la izquierda en MD, centrada en móvil por defecto del grid text-center arriba) -->
+                <!-- Info -->
                 <div class="flex flex-col items-center md:items-start">
                     <div class="flex items-center gap-3 mb-6">
                          <img src="https://imgur.com/fK0G2no.jpg" alt="Logo Footer" class="h-10 w-auto bg-white rounded p-1">
@@ -249,12 +240,11 @@
                 <!-- Enlaces (Centrado explícito) -->
                 <div class="flex flex-col items-center">
                     <h4 class="text-lg font-bold mb-6 text-psoe-red">Enlaces Rápidos</h4>
-                    <!-- w-fit asegura que el grid se centre respecto al contenedor flex -->
                     <ul class="grid grid-cols-2 gap-x-8 gap-y-3 text-gray-300 w-fit text-left">
-                        <li><a href="https://psoederonda.github.io/grupo-municipal/" class="hover:text-white transition">Grupo Municipal</a></li>
-                        <li><a href="https://psoederonda.github.io/grupo-municipal/#campanas-seccion" class="hover:text-white transition">Campañas</a></li>
-                        <li><a href="https://psoederonda.github.io/grupo-municipal/#mociones-seccion" class="hover:text-white transition">Mociones</a></li>
-                        <li><a href="#" class="hover:text-white transition">Ágoras</a></li>
+                        <li><a href="https://psoederonda.github.io/grupo-municipal/" target="_blank" class="hover:text-white transition">Grupo Municipal</a></li>
+                        <li><a href="https://psoederonda.github.io/grupo-municipal/#campanas-seccion" target="_blank" class="hover:text-white transition">Campañas</a></li>
+                        <li><a href="https://psoederonda.github.io/grupo-municipal/#mociones-seccion" target="_blank" class="hover:text-white transition">Mociones</a></li>
+                        <li><a href="https://psoederonda.github.io/agoras/" target="_blank" class="hover:text-white transition">Ágoras</a></li>
                     </ul>
                 </div>
 
