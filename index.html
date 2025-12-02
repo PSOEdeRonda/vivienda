@@ -58,7 +58,7 @@
             <!-- Logo PSOE Ronda -->
             <a href="#" class="flex items-center gap-3">
                 <img src="https://imgur.com/fK0G2no.jpg" alt="Logo PSOE Ronda" class="h-12 w-auto object-contain">
-                <span class="text-2xl font-bold text-psoe-red hidden md:block">PSOE RONDA</span>
+                <span class="text-2xl font-bold text-psoe-red hidden md:block">PSOE Ronda</span>
             </a>
             
             <!-- Navegación Escritorio -->
@@ -233,22 +233,24 @@
     <!-- CALL TO ACTION / FOOTER -->
     <footer id="contacto" class="bg-gray-900 text-white pt-16 pb-8 border-t-4 border-psoe-red">
         <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-3 gap-12 mb-12">
-                <!-- Info -->
-                <div>
+            <!-- Aumentado gap-12 a gap-16 para más espacio -->
+            <div class="grid md:grid-cols-3 gap-16 mb-12 text-center md:text-left">
+                <!-- Info (Se mantiene alineada a la izquierda en MD, centrada en móvil por defecto del grid text-center arriba) -->
+                <div class="flex flex-col items-center md:items-start">
                     <div class="flex items-center gap-3 mb-6">
                          <img src="https://imgur.com/fK0G2no.jpg" alt="Logo Footer" class="h-10 w-auto bg-white rounded p-1">
                          <span class="text-xl font-bold text-white">PSOE Ronda</span>
                     </div>
-                    <p class="text-gray-400 mb-6">
+                    <p class="text-gray-400 mb-6 text-center md:text-left">
                         Trabajando por una Ronda más justa, moderna y habitable. La vivienda es un derecho, no un negocio.
                     </p>
                 </div>
                 
-                <!-- Enlaces -->
-                <div>
+                <!-- Enlaces (Centrado explícito) -->
+                <div class="flex flex-col items-center">
                     <h4 class="text-lg font-bold mb-6 text-psoe-red">Enlaces Rápidos</h4>
-                    <ul class="space-y-3 text-gray-300">
+                    <!-- w-fit asegura que el grid se centre respecto al contenedor flex -->
+                    <ul class="grid grid-cols-2 gap-x-8 gap-y-3 text-gray-300 w-fit text-left">
                         <li><a href="https://psoederonda.github.io/grupo-municipal/" class="hover:text-white transition">Grupo Municipal</a></li>
                         <li><a href="https://psoederonda.github.io/grupo-municipal/#campanas-seccion" class="hover:text-white transition">Campañas</a></li>
                         <li><a href="https://psoederonda.github.io/grupo-municipal/#mociones-seccion" class="hover:text-white transition">Mociones</a></li>
@@ -256,8 +258,8 @@
                     </ul>
                 </div>
 
-                <!-- Social -->
-                <div>
+                <!-- Social (Centrado explícito) -->
+                <div class="flex flex-col items-center">
                     <h4 class="text-lg font-bold mb-6 text-psoe-red">Síguenos</h4>
                     <div class="flex gap-4">
                         <a href="https://www.facebook.com/RondaSomos" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-psoe-red transition"><i class="fab fa-facebook-f"></i></a>
@@ -271,13 +273,37 @@
         </div>
     </footer>
 
-    <!-- Script Menú Móvil -->
+    <!-- Botón Volver Arriba -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-psoe-red text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transform translate-y-20 opacity-0 transition-all duration-300 z-50 hover:bg-psoe-dark hover:scale-110 focus:outline-none" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Script Menú Móvil y Volver Arriba -->
     <script>
+        // Menú Móvil
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
 
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
+        });
+
+        // Botón Volver Arriba
+        const backToTopBtn = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove('translate-y-20', 'opacity-0');
+            } else {
+                backToTopBtn.classList.add('translate-y-20', 'opacity-0');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
     </script>
 </body>
