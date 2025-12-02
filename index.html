@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Vivienda | PSOE Ronda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        psoe: {
+                            red: '#E30613',     /* ROJO PSOE (Positivo/Propuestas) */
+                            dark: '#B00000',
+                            light: '#FFEBEE'
+                        },
+                        pp: {
+                            blue: '#0055A0',    /* AZUL (Oposición/Negativo) */
+                            light: '#EBF5FF'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .text-shadow { text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        
+        /* Animación suave para elementos */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 20px, 0);
+            }
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- NAV / HEADER -->
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo PSOE Ronda -->
+            <a href="#" class="flex items-center gap-3">
+                <img src="https://imgur.com/fK0G2no.jpg" alt="Logo PSOE Ronda" class="h-12 w-auto object-contain">
+                <span class="text-2xl font-bold text-psoe-red hidden md:block">PSOE RONDA</span>
+            </a>
+            
+            <!-- Navegación Escritorio -->
+            <nav class="hidden md:flex gap-6 font-bold">
+                <a href="#realidad" class="hover:text-psoe-red transition">La Realidad</a>
+                <a href="#solucion" class="hover:text-psoe-red transition">Nuestra Solución</a>
+                <a href="#ejes" class="hover:text-psoe-red transition">4 Ejes</a>
+            </nav>
+
+            <!-- Botón Móvil -->
+            <button id="mobile-menu-btn" class="md:hidden text-psoe-red text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Menú Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 flex-col gap-4 shadow-lg absolute w-full top-full left-0">
+            <a href="#realidad" class="block py-2 text-gray-600 hover:text-psoe-red font-bold">La Realidad</a>
+            <a href="#solucion" class="block py-2 text-gray-600 hover:text-psoe-red font-bold">Nuestra Solución</a>
+            <a href="#ejes" class="block py-2 text-gray-600 hover:text-psoe-red font-bold">4 Ejes</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-gradient-to-br from-gray-900 to-gray-800 overflow-hidden">
+        <!-- Fondo Decorativo -->
+        <div class="absolute inset-0 opacity-20 bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Puente_Nuevo_Ronda.jpg/1200px-Puente_Nuevo_Ronda.jpg')] bg-cover bg-center"></div>
+        
+        <!-- Contenedor principal centrado -->
+        <div class="container mx-auto px-4 relative z-10 flex flex-col items-center text-center">
+            
+            <!-- Texto Hero (Título y Subtítulo Anchos) -->
+            <div class="animate-fade-in-up w-full max-w-5xl mx-auto mb-10">
+                <span class="inline-block bg-psoe-red text-white text-sm font-bold px-3 py-1 rounded-full mb-6 uppercase tracking-wider">
+                    VIVIENDA
+                </span>
+                <h1 class="text-4xl md:text-7xl font-black text-white leading-tight mb-8">
+                    Nuestro plan para el <span class="text-psoe-red">CAMBIO</span>: <br>
+                    La Vivienda es Prioridad
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto font-light">
+                    Frente a la parálisis y la especulación, ofrecemos soluciones reales.
+                    <span class="text-white font-bold block mt-3 text-2xl md:text-3xl">Más de 1.000 viviendas para Ronda.</span>
+                </p>
+                
+                <!-- Botón de acción (Mantenido cerca del texto para usabilidad) -->
+                <div class="flex justify-center mb-12">
+                    <a href="#solucion" class="bg-psoe-red text-white px-10 py-4 rounded-lg font-bold text-xl hover:bg-psoe-dark transition transform hover:scale-105 shadow-lg border-2 border-transparent hover:border-white">
+                        <i class="fas fa-hammer me-2"></i> Ver Propuesta
+                    </a>
+                </div>
+            </div>
+
+            <!-- Imagen Logo Plan (Debajo del texto) -->
+            <div class="flex justify-center animate-fade-in-up w-full" style="animation-delay: 0.2s;">
+                <img src="https://imgur.com/K63kqOG.png" alt="Logo Nuestro Plan para el Cambio" class="w-full max-w-lg md:max-w-xl drop-shadow-2xl transform hover:scale-105 transition duration-500">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE CONTRASTE: LA REALIDAD (Negativo en Azul) VS EL COMPROMISO (Positivo en Rojo) -->
+    <section id="realidad" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-4">Dos Modelos, Dos Realidades</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Los datos no mienten. Comparamos la gestión actual con nuestra propuesta de futuro.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                
+                <!-- Tarjeta Negativa (PP - Azul) -->
+                <div class="bg-pp-light border-2 border-pp-blue rounded-2xl p-8 md:p-12 text-center transform transition hover:-translate-y-2 shadow-lg">
+                    <div class="inline-block p-4 bg-white rounded-full mb-6 shadow-md">
+                        <i class="fas fa-ban text-4xl text-pp-blue"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-pp-blue mb-2 uppercase">Gestión Actual (PP)</h3>
+                    <div class="text-6xl font-black text-pp-blue mb-4">0 <span class="text-3xl">Llaves</span></div>
+                    <p class="text-gray-700 font-medium mb-6">Entregadas en 15 años de gobierno</p>
+                    <ul class="text-left space-y-3 text-gray-600 mx-auto max-w-xs">
+                        <li class="flex items-center"><i class="fas fa-times text-pp-blue w-6 flex-shrink-0"></i> Parálisis urbanística</li>
+                        <li class="flex items-center"><i class="fas fa-times text-pp-blue w-6 flex-shrink-0"></i> Pérdida de población</li>
+                        <li class="flex items-center"><i class="fas fa-times text-pp-blue w-6 flex-shrink-0"></i> Especulación</li>
+                        <li class="flex items-center"><i class="fas fa-times text-pp-blue w-6 flex-shrink-0"></i> Burocracia excesiva</li>
+                    </ul>
+                </div>
+
+                <!-- Tarjeta Positiva (PSOE - Rojo) -->
+                <div class="bg-psoe-light border-2 border-psoe-red rounded-2xl p-8 md:p-12 text-center transform transition hover:-translate-y-2 shadow-xl ring-4 ring-red-100">
+                    <div class="inline-block p-4 bg-psoe-red rounded-full mb-6 shadow-md">
+                        <i class="fas fa-check text-4xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-psoe-red mb-2 uppercase">Compromiso PSOE</h3>
+                    <div class="text-6xl font-black text-psoe-red mb-4">1.000 <span class="text-3xl">Viviendas</span></div>
+                    <p class="text-gray-700 font-medium mb-6">Planificadas para la próxima legislatura</p>
+                    <ul class="text-left space-y-3 text-gray-700 mx-auto max-w-xs">
+                        <li class="flex items-center"><i class="fas fa-heart text-psoe-red w-6 flex-shrink-0"></i> Planificación real</li>
+                        <li class="flex items-center"><i class="fas fa-heart text-psoe-red w-6 flex-shrink-0"></i> Crecimiento sostenible</li>
+                        <li class="flex items-center"><i class="fas fa-heart text-psoe-red w-6 flex-shrink-0"></i> Oportunidad para jóvenes</li>
+                        <li class="flex items-center"><i class="fas fa-heart text-psoe-red w-6 flex-shrink-0"></i> Gestión pública eficaz</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN FILOSOFÍA -->
+    <section id="solucion" class="py-16 bg-psoe-red text-white text-center">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <i class="fas fa-quote-left text-4xl text-red-300 mb-6"></i>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 leading-relaxed">
+                "El Ayuntamiento <span class="underline decoration-white decoration-4 underline-offset-4">SÍ</span> puede hacer vivienda. Si Fuente de Piedra puede, Ronda también."
+            </h2>
+            <p class="text-xl text-red-100 font-medium">
+                — Ágora sobre Vivienda, Plan para el Cambio
+            </p>
+        </div>
+    </section>
+
+    <!-- LOS 4 EJES DEL CAMBIO (Positivo - Rojo) -->
+    <section id="ejes" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-psoe-red font-bold uppercase tracking-widest text-sm">Nuestro Programa</span>
+                <h2 class="text-4xl font-black text-gray-800 mt-2">Los 4 Ejes del Cambio</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Eje 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition border-b-4 border-psoe-red group">
+                    <div class="w-14 h-14 bg-red-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-psoe-red transition">
+                        <i class="fas fa-hands-helping text-2xl text-psoe-red group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-psoe-red transition">Alquiler Social</h3>
+                    <p class="text-gray-600 text-sm mb-4">Para rentas bajas e integración real.</p>
+                    <div class="font-bold text-psoe-red text-2xl">400 <span class="text-sm text-gray-500 font-normal">viviendas</span></div>
+                </div>
+
+                <!-- Eje 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition border-b-4 border-psoe-red group">
+                    <div class="w-14 h-14 bg-red-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-psoe-red transition">
+                        <i class="fas fa-hard-hat text-2xl text-psoe-red group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-psoe-red transition">VPO Trabajadores</h3>
+                    <p class="text-gray-600 text-sm mb-4">Colaboración público-privada.</p>
+                    <div class="font-bold text-psoe-red text-2xl">120 <span class="text-sm text-gray-500 font-normal">viviendas</span></div>
+                </div>
+
+                <!-- Eje 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition border-b-4 border-psoe-red group">
+                    <div class="w-14 h-14 bg-red-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-psoe-red transition">
+                        <i class="fas fa-drafting-compass text-2xl text-psoe-red group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-psoe-red transition">Autoconstrucción</h3>
+                    <p class="text-gray-600 text-sm mb-4">Suelo municipal para jóvenes.</p>
+                    <div class="font-bold text-psoe-red text-lg">Suelo Disponible</div>
+                </div>
+
+                <!-- Eje 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition border-b-4 border-psoe-red group">
+                    <div class="w-14 h-14 bg-red-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-psoe-red transition">
+                        <i class="fas fa-users text-2xl text-psoe-red group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-psoe-red transition">Rehabilitación</h3>
+                    <p class="text-gray-600 text-sm mb-4">Senior Cohousing y rescate del centro.</p>
+                    <div class="font-bold text-psoe-red text-lg">Modelo Cesión</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION / FOOTER -->
+    <footer id="contacto" class="bg-gray-900 text-white pt-16 pb-8 border-t-4 border-psoe-red">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <!-- Info -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                         <img src="https://imgur.com/fK0G2no.jpg" alt="Logo Footer" class="h-10 w-auto bg-white rounded p-1">
+                         <span class="text-xl font-bold text-white">PSOE Ronda</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Trabajando por una Ronda más justa, moderna y habitable. La vivienda es un derecho, no un negocio.
+                    </p>
+                </div>
+                
+                <!-- Enlaces -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-psoe-red">Enlaces Rápidos</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><a href="https://psoederonda.github.io/grupo-municipal/" class="hover:text-white transition">Grupo Municipal</a></li>
+                        <li><a href="https://psoederonda.github.io/grupo-municipal/#campanas-seccion" class="hover:text-white transition">Campañas</a></li>
+                        <li><a href="https://psoederonda.github.io/grupo-municipal/#mociones-seccion" class="hover:text-white transition">Mociones</a></li>
+                        <li><a href="#" class="hover:text-white transition">Ágoras</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-psoe-red">Síguenos</h4>
+                    <div class="flex gap-4">
+                        <a href="https://www.facebook.com/RondaSomos" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-psoe-red transition"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 PSOE Ronda. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Menú Móvil -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
